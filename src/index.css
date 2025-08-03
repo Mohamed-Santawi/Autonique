@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+/* Custom styles for RTL support */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Page Cover Styles */
+.page-cover {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  padding: 0 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000d;
+}
+
+.hp_hero_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.btn.transparent.white-font {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.transparent.white-font:hover {
+  background: white;
+  color: black;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.scroll-down:hover {
+  color: #93c5fd;
+}
+
+.desktop {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  background-color: #00000d;
+}
+
+.mobile.circle_spin {
+  display: none;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1885px) {
+  .page-cover {
+    padding: 0 200px;
+  }
+}
+
+@media only screen and (max-width: 1770px) {
+  .page-cover {
+    padding: 0 150px;
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .page-cover {
+    padding: 0 80px;
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .page-cover {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .page-cover {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-cover {
+    padding: 0 20px;
+  }
+
+  .hp_hero_text h1 {
+    font-size: 2rem;
+  }
+
+  .hp_hero_text p {
+    font-size: 1rem;
+  }
+}
+
+/* Arabic RTL Support */
+.arabic .homepage .page-cover {
+  direction: rtl;
+}
