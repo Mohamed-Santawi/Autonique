@@ -194,7 +194,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800"
+      className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -205,17 +205,17 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
             style={{
-              textShadow: "0 0 20px rgba(139, 92, 246, 0.5)",
+              textShadow: "0 0 20px rgba(31, 41, 55, 0.1)",
             }}
           >
             خدماتنا
           </h2>
           <p
-            className="text-xl text-purple-100 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             style={{
-              textShadow: "0 0 10px rgba(139, 92, 246, 0.3)",
+              textShadow: "0 0 10px rgba(75, 85, 99, 0.1)",
             }}
           >
             ارتقِ بمعاييرك الأمنية من خلال مجموعة شاملة من الخدمات المتقدمة
@@ -235,36 +235,36 @@ const Services = () => {
               variants={itemVariants}
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 30px rgba(251, 191, 36, 0.3)",
+                boxShadow: "0 0 30px rgba(59, 130, 246, 0.2)",
               }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-yellow-400/50 transition-all duration-300"
+              className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl"
               style={{
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div
-                className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-6 text-white"
+                className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 text-white"
                 style={{
-                  boxShadow: "0 4px 20px rgba(251, 191, 36, 0.4)",
+                  boxShadow: "0 4px 20px rgba(59, 130, 246, 0.3)",
                 }}
               >
                 {service.icon}
               </div>
               <h3
-                className="text-xl font-bold text-white mb-4"
+                className="text-xl font-bold text-gray-800 mb-4"
                 style={{
-                  textShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
+                  textShadow: "0 0 10px rgba(31, 41, 55, 0.1)",
                 }}
               >
                 {service.title}
               </h3>
-              <p className="text-purple-100 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {service.description}
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="mt-4 text-yellow-300 cursor-pointer hover:text-yellow-200 font-semibold transition-colors"
+                className="mt-4 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
               >
                 المزيد...
               </motion.button>
