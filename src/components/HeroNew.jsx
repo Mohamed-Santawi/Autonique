@@ -1,32 +1,32 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const HeroNew = () => {
   const videoRef = useRef(null);
-  const [videoStatus, setVideoStatus] = useState('loading');
+  const [videoStatus, setVideoStatus] = useState("loading");
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load();
 
-      videoRef.current.addEventListener('loadstart', () => {
-        console.log('Video loading started');
-        setVideoStatus('loading');
+      videoRef.current.addEventListener("loadstart", () => {
+        console.log("Video loading started");
+        setVideoStatus("loading");
       });
 
-      videoRef.current.addEventListener('loadeddata', () => {
-        console.log('Video data loaded');
-        setVideoStatus('loaded');
+      videoRef.current.addEventListener("loadeddata", () => {
+        console.log("Video data loaded");
+        setVideoStatus("loaded");
       });
 
-      videoRef.current.addEventListener('canplay', () => {
-        console.log('Video can play');
-        setVideoStatus('playing');
+      videoRef.current.addEventListener("canplay", () => {
+        console.log("Video can play");
+        setVideoStatus("playing");
       });
 
-      videoRef.current.addEventListener('error', (e) => {
-        console.error('Video error:', e);
-        setVideoStatus('error');
+      videoRef.current.addEventListener("error", (e) => {
+        console.error("Video error:", e);
+        setVideoStatus("error");
       });
     }
   }, []);
@@ -48,7 +48,7 @@ const HeroNew = () => {
       </video>
 
       {/* Video Status Debug */}
-      {process.env.NODE_ENV === 'development' && (
+      {import.meta.env.DEV && (
         <div className="absolute top-4 left-4 z-30 bg-black bg-opacity-75 text-white px-3 py-1 rounded text-sm">
           Video Status: {videoStatus}
         </div>
@@ -58,7 +58,7 @@ const HeroNew = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-blue-900/50"></div>
 
       {/* Fallback Background - Only show if video fails */}
-      {videoStatus === 'error' && (
+      {videoStatus === "error" && (
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-black"></div>
       )}
 
@@ -77,23 +77,28 @@ const HeroNew = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-5xl md:text-7xl mt-24 lg:text-8xl font-black mb-6 leading-tight"
             style={{
-              background: 'linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #3b82f6 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textShadow: '0 0 30px rgba(59, 130, 246, 0.5)',
-              filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))'
+              background:
+                "linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #3b82f6 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              textShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
+              filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))",
             }}
           >
             مرحباً بكم في
-            <span className="block text-6xl md:text-8xl lg:text-9xl mt-2" style={{
-              background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textShadow: '0 0 30px rgba(251, 191, 36, 0.5)',
-              filter: 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))'
-            }}>
+            <span
+              className="block text-6xl md:text-8xl lg:text-9xl mt-2"
+              style={{
+                background:
+                  "linear-gradient(135deg, #ffffff 0%, #60a5fa 50%, #3b82f6 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                textShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
+                filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))",
+              }}
+            >
               Autonique
             </span>
           </motion.h1>
@@ -105,8 +110,9 @@ const HeroNew = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-white"
             style={{
-              textShadow: '0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4)',
-              filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'
+              textShadow:
+                "0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4)",
+              filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))",
             }}
           >
             خدمات احترافية في الأمن السيبراني
@@ -119,15 +125,19 @@ const HeroNew = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-12 leading-relaxed max-w-4xl mx-auto"
             style={{
-              textShadow: '0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6)',
-              filter: 'drop-shadow(0 0 5px rgba(255, 255, 255, 0.1))'
+              textShadow:
+                "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6)",
+              filter: "drop-shadow(0 0 5px rgba(255, 255, 255, 0.1))",
             }}
           >
-            نُمكِّن أعمالكم من خلال تدابير أمن سيبراني متقدمة. نحن شريك موثوق في الأمن السيبراني مقرنا الإمارات العربية المتحدة. نحمي حدودك الرقمية بكل فخر من خلال حلول وخدمات أمن سيبراني متطورة. ارتقِ باستراتيجيتك الدفاعية اليوم!
+            نُمكِّن أعمالكم من خلال تدابير أمن سيبراني متقدمة. نحن شريك موثوق في
+            الأمن السيبراني مقرنا الإمارات العربية المتحدة. نحمي حدودك الرقمية
+            بكل فخر من خلال حلول وخدمات أمن سيبراني متطورة. ارتقِ باستراتيجيتك
+            الدفاعية اليوم!
           </motion.p>
 
           {/* Call to Action Buttons */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
@@ -136,14 +146,15 @@ const HeroNew = () => {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)"
+                boxShadow: "0 0 30px rgba(59, 130, 246, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-4 cursor-pointer text-lg font-bold rounded-xl border-3 border-white text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300"
               style={{
-                textShadow: '0 0 10px rgba(255, 255, 255, 0.5)',
-                boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)'
+                textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
+                boxShadow:
+                  "0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
               }}
             >
               استشارة مجانية
@@ -152,18 +163,19 @@ const HeroNew = () => {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 30px rgba(251, 191, 36, 0.6)"
+                boxShadow: "0 0 30px rgba(251, 191, 36, 0.6)",
               }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-4 text-lg cursor-pointer font-bold rounded-xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
               style={{
-                textShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
-                boxShadow: '0 0 25px rgba(251, 191, 36, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2)'
+                textShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+                boxShadow:
+                  "0 0 25px rgba(251, 191, 36, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2)",
               }}
             >
               طلب عرض الأسعار
             </motion.button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
 
@@ -179,7 +191,7 @@ const HeroNew = () => {
           whileHover={{ scale: 1.1 }}
           className="flex flex-col items-center text-white hover:text-yellow-300 transition-colors cursor-pointer"
           style={{
-            textShadow: '0 0 15px rgba(255, 255, 255, 0.5)'
+            textShadow: "0 0 15px rgba(255, 255, 255, 0.5)",
           }}
         >
           <span className="text-sm font-medium mb-2">تحرك للأسفل</span>
@@ -188,7 +200,7 @@ const HeroNew = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center"
             style={{
-              boxShadow: '0 0 15px rgba(255, 255, 255, 0.3)'
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.3)",
             }}
           >
             <div className="w-1 h-1 bg-white rounded-full"></div>

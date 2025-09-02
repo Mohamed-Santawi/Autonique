@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed - not needed with JSX transform
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -133,7 +133,7 @@ const About = () => {
               لضمان نمو أعمالكم في بيئة رقمية آمنة.
             </p>
 
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg"
@@ -142,7 +142,7 @@ const About = () => {
               }}
             >
               اعرف المزيد عنا
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* Stats */}

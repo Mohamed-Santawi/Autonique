@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed - not needed with JSX transform
 import { motion } from "framer-motion";
 
 const Hero = () => {

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-
+import logo from "../assets/logoNew.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -18,6 +18,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
+            <img src={logo} alt="logo" className="w-20 h-12 object-contain" />
             <h1 className="text-2xl font-bold text-white">Autonique</h1>
           </motion.div>
 
@@ -62,13 +63,13 @@ const Header = () => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-6 space-x-reverse">
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-blue-600 text-white cursor-pointer px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors border-2 border-blue-600 hover:border-blue-700"
             >
               احصل على استشارة
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,13 +134,13 @@ const Header = () => {
                 تواصل معنا
               </a>
             </nav>
-            <div className="mt-4 pt-4 border-t border-white border-opacity-20">
+            {/* <div className="mt-4 pt-4 border-t border-white border-opacity-20">
               <p className="text-white text-sm mb-2">+971 50 123 4567</p>
               <p className="text-gray-300 text-sm mb-4">info@autonique.ae</p>
               <button className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors w-full">
                 احصل على استشارة
               </button>
-            </div>
+            </div> */}
           </motion.div>
         )}
       </div>
